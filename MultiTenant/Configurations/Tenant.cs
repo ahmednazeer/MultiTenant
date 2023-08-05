@@ -3,7 +3,7 @@
     public class Tenant
     {
         public string? ConnectionString { get; set; }
-        public string TenantId { get; set; } = null!;
-        public string TenantName { get; set; } = null!;
+        public string Id { get; set; } = null!;
+        public string Name { get; set; } = null!;
     }
 }

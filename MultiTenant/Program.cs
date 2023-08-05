@@ -29,6 +29,7 @@ if (!string.IsNullOrEmpty(defaultDbProvider))
 //register servoces dependencies
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ITenantService, TenantService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 
 var app = builder.Build();

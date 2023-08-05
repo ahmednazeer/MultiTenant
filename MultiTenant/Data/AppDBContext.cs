@@ -12,7 +12,7 @@ namespace MultiTenant.Data
         public AppDBContext(DbContextOptions options, ITenantService tenantService) :base(options)
         {
             _tenantService = tenantService;
-            TenantId = _tenantService.GetCurrentTenant()?.TenantId;
+            TenantId = _tenantService.GetCurrentTenant()?.Id;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

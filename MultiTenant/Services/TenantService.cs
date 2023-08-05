@@ -40,7 +40,7 @@ namespace MultiTenant.Services
         private Tenant? SetCurrentTenant(string  tenantId)
         {
             
-            Tenant currentTenant = _tenantSettings.Tenants.FirstOrDefault(t => t.TenantId == tenantId);
+            Tenant currentTenant = _tenantSettings.Tenants.FirstOrDefault(t => t.Id == tenantId);
             if (currentTenant is not null && currentTenant.ConnectionString is null)
                     currentTenant.ConnectionString = _tenantSettings.Defaults.ConnectionString;
             return currentTenant;

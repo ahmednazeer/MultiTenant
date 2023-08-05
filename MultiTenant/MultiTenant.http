@@ -1,0 +1,16 @@
+﻿@MultiTenant_HostAddress = https://localhost:7239
+
+GET {{MultiTenant_HostAddress}}/api/products
+tenant:NizoLabs
+###
+POST {{MultiTenant_HostAddress}}/api/products
+tenant:NizoPharma
+Content-Type: application/json
+
+{
+  "name":"Test",
+  "description":"testststst",
+  "rate":5,
+  "tenantId":"NizoPharma"
+}
+###
